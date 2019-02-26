@@ -201,20 +201,69 @@ public class Problems {
         else if (target == 1)
             return 1;
         else
-            return JumpFloorII(target - 1)*2;
+            return JumpFloorII(target - 1) * 2;
 
     }
 
     /**
-     * Problem9
-     *
+     * Problem9：
+     * 我们可以用2*1的小矩形横着或者竖着去覆盖更大的矩形。请问用n个2*1的小矩形无重叠地覆盖一个2*n的大矩形，总共有多少种方法？
+     * <p>
+     * 解法：这种求多少种方法的一般用动态规划,分析第一块竖排，和第一二块横排情况
      */
-
-
-    public static void main(String[] args) {
-        System.out.println(JumpFloorII(5));
-
+    public int RectCover(int target) {
+        if (target <= 0)
+            return 0;
+        else if (target == 1)
+            return 1;
+        else if (target == 2)
+            return 2;
+        else
+            return RectCover(target - 1) + RectCover(target - 2);
     }
+
+    /**
+     * Problem10:
+     * 输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。
+     * <p>
+     * 解法：如果一个整数不为0，那么这个整数至少有一位是1。如果我们把这个整数减1，那么原来处在整数最右边的1就会变为0，
+     * 原来在1后面的所有的0都会变成1(如果最右边的1后面还有0的话)。其余所有位将不会受到影响。
+     */
+    public int NumberOf1(int n) {
+        int cnt = 0;
+        while (n != 0) {
+            ++cnt;
+            n = n & (n - 1);
+        }
+        return cnt;
+    }
+
+    /**
+     * Problem11:
+     * 给定一个double类型的浮点数base和int类型的整数exponent。求base的exponent次方。
+     * <p>
+     * 解法：将次方分为奇数偶数考虑
+     * 注意：次方可能是负数和0。数字可能是0.
+     */
+    public double Power(double base, int exponent) {
+        if (exponent < 0)
+            return 1/powerWithUnsignedExponent(base, -exponent);
+        return powerWithUnsignedExponent(base, exponent);
+    }
+    private double powerWithUnsignedExponent(double base, int exponent) {
+        if (exponent == 0)
+            return 1;
+        if (base == 0)
+            return 0;
+        if (exponent == 1)
+            return base;
+        double res = Power(base, exponent >> 1);//除2
+        res *= res;
+        if (exponent % 2 == 1)
+            res *= base;
+        return res;
+    }
+
 }
 
 
