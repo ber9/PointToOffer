@@ -4,7 +4,7 @@
 public class TreeNode {
     TreeNode left;
     TreeNode right;
-    int val;
+    int val = 0;
 
     TreeNode(int val) {
         this.val = val;
