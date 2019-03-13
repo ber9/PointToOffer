@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ed26e48-2cc7-435f-926d-1767684664a3" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PointToOffer/Problems$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PointToOffer/Problems$Solution.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/PointToOffer/RandomListNode.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PointToOffer/Problems.class" afterPath="$PROJECT_DIR$/out/production/PointToOffer/Problems.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PointToOffer/TreeNode.class" afterPath="$PROJECT_DIR$/out/production/PointToOffer/TreeNode.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Problems.java" afterPath="$PROJECT_DIR$/src/Problems.java" />
@@ -20,8 +23,8 @@
       <file leaf-file-name="Problems.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Problems.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="731" column="89" lean-forward="false" selection-start-line="731" selection-start-column="89" selection-end-line="731" selection-end-column="89" />
+            <state relative-caret-position="322">
+              <caret line="795" column="0" lean-forward="true" selection-start-line="795" selection-start-column="0" selection-end-line="795" selection-end-column="0" />
               <folding>
                 <element signature="e#3856#3865#0" expanded="true" />
                 <element signature="e#3906#3915#0" expanded="true" />
@@ -732,7 +735,7 @@
       <workItem from="1552266855385" duration="4812000" />
       <workItem from="1552271747121" duration="757000" />
       <workItem from="1552295540306" duration="10604000" />
-      <workItem from="1552439646153" duration="28000" />
+      <workItem from="1552439646153" duration="106000" />
     </task>
     <task id="LOCAL-00001" summary="problem9">
       <created>1551162620727</created>
@@ -752,7 +755,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88243000" />
+    <option name="totallyTimeSpent" value="88321000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -764,7 +767,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="-8" width="1873" height="1096" extended-state="1" />
+    <frame x="55" y="-8" width="1873" height="1096" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -788,7 +792,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18422504" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18422504" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1180,8 +1184,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Problems.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="731" column="89" lean-forward="false" selection-start-line="731" selection-start-column="89" selection-end-line="731" selection-end-column="89" />
+        <state relative-caret-position="322">
+          <caret line="795" column="0" lean-forward="true" selection-start-line="795" selection-start-column="0" selection-end-line="795" selection-end-column="0" />
           <folding>
             <element signature="e#3856#3865#0" expanded="true" />
             <element signature="e#3906#3915#0" expanded="true" />
