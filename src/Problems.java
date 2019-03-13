@@ -699,6 +699,97 @@ public class Problems {
         return cnt * 2 > array.length ? no : 0;
     }
 
+    /**
+     * Problem25:
+     * 输入n个整数，找出其中最小的K个数。例如输入4,5,1,6,2,7,3,8这8个数字，则最小的4个数字是1,2,3,4,。
+     * <p>
+     * 解法：用java的priorityQueue，使用堆实现的，默认
+     */
+    public ArrayList<Integer> GetLeastNumbers_Solution(int[] input, int k) {
+        ArrayList<Integer> res = new ArrayList<>();
+        if (input == null || input.length == 0 || k <= 0 || k > input.length)
+            return res;
+        PriorityQueue<Integer> queue = new PriorityQueue<>(k, new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o2.compareTo(o1);//降序
+            }
+        });
+
+        for (int i = 0; i < input.length; i++) {
+            if (queue.size() != k) {
+                queue.offer(input[i]);
+            } else if (input[i] < queue.peek()) {
+                queue.poll();
+                queue.offer(input[i]);
+            }
+        }
+        while (!queue.isEmpty())
+            res.add(queue.poll());
+        return res;
+    }
+
+    public static ArrayList<Integer> GetLeastNumbers_SolutionByHeap(int[] input, int k) {
+        ArrayList<Integer> res = new ArrayList<>();
+        if (input == null || input.length == 0 || k <= 0 || k > input.length)
+            return res;
+        int[] heap = new int[k];
+        for (int i = 0; i < k; i++) {
+            heap[i] = input[i];
+        }
+        //1.构建da顶堆
+        for (int i = k / 2 - 1; i >= 0; i--) {//调整各个非叶子节点,直到调整整个结构
+            adjustHeap(heap, i, heap.length);
+        }
+        //2.调整堆结构+交换堆顶元素与末尾元素，这样就从0到len由大到小排列
+        /*for (int j = heap.length - 1; j > 0; j--) {
+            swap(heap, 0, j);//交换堆顶与最后一个元素
+            adjustHeap(heap, 0, j);//重新调整堆
+        }*/
+        for (int m = k; m < input.length; m++) {//从第k个元素开始分别与最大堆的最大值做比较，如果比最大值小，则替换并调整堆。
+            if (input[m] < heap[0]) {
+                heap[0] = input[m];
+                adjustHeap(heap, 0, heap.length);
+            }
+        }
+        for (int i = 0; i < heap.length; i++) {
+            res.add(heap[i]);
+        }
+        return res;
+    }
+
+    private static void adjustHeap(int[] heap, int i, int len) {
+        int tmp = heap[i];
+        for (int k = i * 2 + 1; k < len; k = k * 2 + 1) {//i*2+1为下一左子树,遍历i节点所有子树
+            if (k + 1 < len && heap[k] < heap[k + 1])//寻找最小孩子节点
+                k++;
+            if (heap[k] > tmp) {//如果子节点da于父节点，将子节点赋值给父节点（不交换
+                heap[i] = heap[k];
+                i = k;//锚定空位置
+            } else
+                break;
+        }
+        heap[i] = tmp;//将tmp放到最终位置
+    }
+
+    private static void  swap(int[] array, int i, int j) {
+        int tmp = array[i];
+        array[i] = array[j];
+        array[j] = tmp;
+    }
+
+    public static void main(String[] args) {
+        int[] a = new int[8];
+        a[0] = 4;
+        a[1] = 5;
+        a[2] = 1;
+        a[3] = 6;
+        a[4] = 2;
+        a[5] = 7;
+        a[6] = 3;
+        a[7] = 8;
+        GetLeastNumbers_SolutionByHeap(a,4);
+    }
 }
 
 
